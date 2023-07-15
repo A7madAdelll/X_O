@@ -1,0 +1,183 @@
+*{
+    background-color: rgb(20, 44, 40);
+    color: rgb(253, 203, 212);
+}
+.clearbackground{
+    background-color: transparent;
+}
+
+body{
+    z-index: 1;
+padding: 50px 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,50px);
+grid-template-rows: 30px repeat(3,50px) 60px ;
+gap: 5px;
+}
+
+.xoro{
+    background-color: rgb(10, 95, 101);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.xoro:hover{
+    cursor: pointer;
+    opacity: 80%;
+   
+
+}
+
+
+
+@keyframes xgetbegger {
+    0%{
+        
+transform:scale(1);
+    }
+    23%{
+transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+
+}
+@keyframes turnmove {
+    0%{
+        opacity: 0%;
+transform: translateX(20px);
+    }
+
+    100%{opacity: 100%;
+        transform: translateX(0);
+
+    }
+
+}
+.topleft{
+  background-color:   rgb(53, 15, 15) transparent;
+grid-column-start : 1;
+grid-column-end : 3;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 20px;
+}
+ .topleftdiv{
+    background:transparent;
+
+width: 100%;
+margin: 3px;white-space: nowrap;
+margin-left: -10px;
+    font-size:20px;
+    animation:  1s ease-in-out xgetbegger ;
+} 
+.topleftp{
+    font-size:8px;
+    animation:  1s ease-in-out turnmove;
+    white-space: nowrap;
+}
+
+.bottom{
+    background-color: rgb(43, 0, 255);
+}
+
+.actions button{
+    margin-top: 8px;
+    font-size: 11px;
+    background-color: rgb(59, 117, 184);
+    width: 100%;
+    height:20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 3px;
+    border: 1px solid rgb(252, 252, 252); ;
+    cursor:pointer;
+   
+    padding: 2px;
+}
+.act{
+
+    position: relative;
+}
+.actionlist{
+    
+border: 1px solid black transparent;
+position: absolute;
+width: 130%;
+left: -8px;
+padding: 2px;
+margin-top: 3px;
+display: flex;
+flex-direction: column;
+align-items: baseline;
+justify-content: space-around;
+gap: 3px;
+
+}
+.actionlist button{
+    z-index: 10;
+
+
+    /* left: -13px; */
+    font-size: 11px;
+    background-color: rgb(98, 45, 45);
+    width: 100%;
+    height: 50%;
+    border-radius: 3px;
+
+    border: 0px solid transparent ;
+    cursor:pointer;
+position: relative;
+
+padding: 2px;
+}
+
+.actions:hover{
+
+opacity: 80%;
+}
+.actions i{
+    background-color: transparent;
+}
+.hidden{
+    display: none !important;
+}
+
+
+.natega{
+display: flex;
+position: fixed;
+height: 100%;
+width: 100%;
+justify-content: center;
+align-items: center;    
+background-color: rgba(0, 0,0,.3);
+z-index: 50;
+
+}
+.nategabox{  z-index: 1000;
+    background-color: rgba(0, 255, 229, 1) ;
+    opacity: 100%;
+  
+height: 100px;
+width: 200px;
+display: flex;
+justify-content: center;
+align-items: center;    
+flex-direction: column;
+
+}
